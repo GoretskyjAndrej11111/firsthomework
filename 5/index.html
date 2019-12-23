@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework 5</title>
+</head>
+<body>
+	<script>
+		var enterFirstNumber = Number(prompt('введите первое число'));
+		var enterSecondNumber = Number(prompt('введите первое число'));
+		var enterSumbol = prompt('введите знак выражения: +, -, /, * или %');
+		
+		var result = function(firstNumber, secondNumber, sumbol) {
+            switch(sumbol) {
+            case '+': 
+                return firstNumber + secondNumber;
+                break;
+            case '-':
+                return firstNumber - secondNumber;
+                break;
+            case '*':
+                return firstNumber * secondNumber;
+                break;
+            case '/':
+                return firstNumber / secondNumber;
+                break;
+            case '%':
+                return firstNumber % secondNumber;
+                break;
+            }          
+        }
+
+        var res = result(enterFirstNumber, enterSecondNumber, enterSumbol);
+        alert(res);
+
+        
+
+        var foo = function(text, symbol) {
+            var word = text;
+            
+            for(var i = 0; i < symbol.length; i++) {
+                for(var j = 0; j < text.length; j++) {
+                    if(text[j] === symbol[i]) {
+                        word = word.replace(text[j], '');
+                    }
+                }
+            }
+            return word;
+        }
+        console.log(foo('hello', ['o']));
+	</script>
+	
+</body>
+</html>
